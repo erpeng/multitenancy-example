@@ -1,0 +1,2 @@
+module MultiHelper
+end
