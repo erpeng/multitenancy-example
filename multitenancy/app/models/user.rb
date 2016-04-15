@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
   private
 
   def create_tenant
-    Apartment::Tenant.create(email)
+    Apartment::Tenant.create(username)
   end	  
 end

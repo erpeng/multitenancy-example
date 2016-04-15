@@ -1,4 +1,8 @@
 <h1>Multi#index</h1>
 <% @user.each do |user| %>
-	<%=  user.email         %> 
+	<%=  user.email         %><br/> 
 <% end %>
+<%=   @request %> <br/>
+<%=   @params %>  <br/>
+<%=   @cookies %> <br/>
+<%=   current_user.email %> <br/>

@@ -23,7 +23,7 @@ Apartment.configure do |config|
   # config.tenant_names = lambda{ Customer.pluck(:tenant_name) }
   # config.tenant_names = ['tenant1', 'tenant2']
   #
-  config.tenant_names = lambda { User.pluck :email}
+  config.tenant_names = lambda { User.pluck :username}
 
   #
   # ==> PostgreSQL only options
@@ -65,3 +65,6 @@ end
 
 # Rails.application.config.middleware.use 'Apartment::Elevators::Domain'
 Rails.application.config.middleware.use 'Apartment::Elevators::Subdomain'
+#Rails.application.config.middleware.use 'Apartment::Elevators::Generic', lambda { |request|
+#	request.host.split('.').first
+#}
